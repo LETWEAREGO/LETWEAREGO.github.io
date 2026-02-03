@@ -1,0 +1,137 @@
+/* Favorites Page Styles - Refined to match Main Theme */
+
+/* Note: Body styles are inherited from home.css */
+
+.favorites-container {
+    display: flex;
+    gap: 40px;
+    position: relative;
+    /* Remove max-width and margin here because .content in home.css handles padding/width */
+    margin-top: 40px;
+}
+
+/* Main Content Area */
+.favorites-content {
+    flex: 1;
+    /* Use a semi-transparent background to make text readable over the background image */
+    background: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    border-radius: 8px;
+    /* Remove shadow to look flatter/cleaner like the main site */
+}
+
+.favorites-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+    border-bottom: 1px solid #DDD;
+    /* Match home.css border color */
+    padding-bottom: 20px;
+    font-family: angelinaFont, sans-serif;
+    /* Match headers font */
+}
+
+.favorites-content h2 {
+    font-size: 1.8em;
+    margin-top: 1.5em;
+    margin-bottom: 0.8em;
+    color: #333;
+    /* Standard color */
+    position: relative;
+    padding-left: 15px;
+    font-family: angelinaFont, sans-serif;
+}
+
+.favorites-content h2::before {
+    content: "#";
+    position: absolute;
+    left: 0;
+    color: #73BC83;
+    /* Green accent */
+}
+
+.favorites-content h3 {
+    font-size: 1.4em;
+    margin-top: 1.2em;
+    color: #444;
+    font-family: jinkaiFont, sans-serif;
+}
+
+.favorites-content ul {
+    list-style: none;
+    /* home.css removes list style */
+    padding-left: 0;
+}
+
+.favorites-content li {
+    margin-bottom: 12px;
+}
+
+.favorites-content a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #DDD;
+    transition: all 0.2s ease;
+}
+
+.favorites-content a:hover {
+    color: #57BF7D;
+    /* Green accent */
+    border-bottom-color: #57BF7D;
+}
+
+/* Sidebar TOC */
+.favorites-toc {
+    width: 250px;
+    position: sticky;
+    top: 40px;
+    height: fit-content;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+}
+
+.favorites-toc h4 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #888;
+    font-size: 1.2em;
+    font-family: angelinaFont, sans-serif;
+}
+
+.favorites-toc ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.favorites-toc li {
+    margin-bottom: 8px;
+}
+
+.favorites-toc a {
+    color: #666;
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.2s;
+    font-family: jinkaiFont, sans-serif;
+}
+
+.favorites-toc a:hover {
+    color: #57BF7D;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+    .favorites-container {
+        flex-direction: column-reverse;
+    }
+
+    .favorites-toc {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+}
